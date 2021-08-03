@@ -12,8 +12,8 @@ public class Bob {
 
         boolean answerQuestion = true;
 
-        do {
 
+        do {
             System.out.println("What do you want to say to Bob?");
             String userResponse = bobReactions.nextLine().trim();
 
@@ -28,13 +28,13 @@ public class Bob {
             }
             System.out.println("Do you want to say anything else? (y/n)");
 
-            String userNewResponse = bobReactions.next();
+            String userNewResponse = bobReactions.nextLine();
 
-            if (!userNewResponse.equalsIgnoreCase("y")){
+            if (!userNewResponse.equalsIgnoreCase("y")) {
                 answerQuestion = false;
-                System.out.println("See you later then.");
+                System.out.println("Stop wasting Bob's time.");
             }
-
         } while (answerQuestion);
     }
 }
+
