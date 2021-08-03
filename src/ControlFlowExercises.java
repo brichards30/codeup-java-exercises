@@ -6,12 +6,12 @@ public class ControlFlowExercises {
 //            while (i <= 15) {
 //                System.out.print(i++ + " ");
 //            }
-            //1C for loop
+        //1C for loop
 //            for (int i = 5; i <= 15; i++) {
 //                System.out.println(i);
 //            }
 
-            //1b.a
+        //1b.a
 //            int i = 0;
 //            do {
 //                System.out.println(i);
@@ -39,19 +39,30 @@ public class ControlFlowExercises {
 //            for (long i = 2; i < 1000000; i *= i) {
 //                System.out.println(i);
 //            }
-            //2. Fizzbuzz
-        for (int i = 1; i <= 100 ; i++) {
-            if (i % 3 == 0){
-                System.out.println();
+        //2. Fizzbuzz
+        for (int i = 1; i <= 100; i++) {
+
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+
+            } else {
+                System.out.println(i);
             }
-        }
         }
     }
 
-  for (int i = 0; i < 100; i++) {
+
+//  for (int i = 0; i < 100; i++) {
 //            if (i == 23){
 //                System.out.println("Skipping 23.");
 //                continue;
 //            }
 //            System.out.println(i);
 //        }
+}
