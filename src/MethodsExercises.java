@@ -36,36 +36,36 @@ public class MethodsExercises {
         } while (true);
     }
 
-    //Sam's version
-    public static String getFactorialString(int num) {
-        String stringToReturn = "";
-
-        for (int i = 1; i <= num; i++) {
-            if (i == num) {
-                stringToReturn += i;
-            } else {
-                stringToReturn += i + " x ";
-            }
-
-        }return stringToReturn;
-    }
-
-    public static void getFactorial(){
-        int userInput = getInteger(1, 10);
+//    //Sam's version
+//    public static String getFactorialString(int num) {
+//        String stringToReturn = "";
+//
+//        for (int i = 1; i <= num; i++) {
+//            if (i == num) {
+//                stringToReturn += i;
+//            } else {
+//                stringToReturn += i + " x ";
+//            }
+//
+//        }return stringToReturn;
+//    }
+//
+//    public static void getFactorial(){
+//        int userInput = getInteger(1, 10);
 //        long factor = 1;
-
-        //Sam's version
-        for (int i = 1; i <= userInput; i++) {
-
-            System.out.println(i + "! = " + getFactorialString(i) + " = " + i);
-
-        }
+//
+//        //Sam's version
+////        for (int i = 1; i <= userInput; i++) {
+////            System.out.println(i + "! = " + getFactorialString(i) + " = " + i);
+////        }
+//
 //        for (int i = userInput; i > 0; i--) {
 //            factor *= i;
 //        }
 //        System.out.println(factor);
+//    }
 
-    }
+
 
     public static void main(String[] args) {
 //        //Addition
@@ -93,8 +93,10 @@ public class MethodsExercises {
 //        System.out.println(userInput);
 
         //3.
-        getFactorial();
+//        getFactorial();
 //        getFactorialString();
+
+
 
 
     }
