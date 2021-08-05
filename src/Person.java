@@ -1,26 +1,28 @@
 public class Person {
     private String name;
 
-    public Person(){//default constructor/no-arg constructor
+    //CONSTRUCTORS
+    public Person() {//default constructor/no-arg constructor
 
     }
 
-    public Person(String name){
+    public Person(String name) {
         this.name = name;
 
     }
 
-    public String getName(){
+    //METHODS
+    public String getName() {
 // return the person's name
-      return name;
-        }
+        return name;
+    }
 
-
-    public void setName(String name){
+    public void setName(String name) {
 // change the name property to the passed value
         this.name = name;
     }
-    public void sayHello(){
+
+    public void sayHello() {
 // print a message to the console using the person's name
         System.out.println("Hello " + getName());
     }
@@ -28,7 +30,7 @@ public class Person {
     public static void main(String[] args) {
         Person denise = new Person("Denise");
         denise.setName("Tim");//
-       denise.sayHello();
+        denise.sayHello();
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));
@@ -38,27 +40,11 @@ public class Person {
         System.out.println(person1 == person2);
 
 
-
-
     }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //NOTES
+//NOTES
 //    //Objects are not primitive
 //    //NEVER HAVE PUBLIC FIELDS FOR A CLASS
 //
@@ -133,7 +119,6 @@ public class Person {
 //
 //       Person tom = new Person("tom", "jones");
 //        System.out.println(tom.getFullName());
-
 
 
 //        System.out.println(abbreviateFirstName());
