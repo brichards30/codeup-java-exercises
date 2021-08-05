@@ -36,6 +36,9 @@ public class Person {
 
        Person.abbreviateFirstName("Bob");
 
+       Person tom = new Person();
+        System.out.println(tom.getFullName());
+
 
 
 //        System.out.println(abbreviateFirstName());
