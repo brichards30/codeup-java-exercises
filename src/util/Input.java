@@ -22,7 +22,7 @@ public class Input {
     public boolean yesNo() {
         System.out.println("Do you like pizza (y/n)?");
         String userResponse = scanner.nextLine();
-        if (userResponse.equals("yes") || userResponse.contains("y")) {
+        if (userResponse.equalsIgnoreCase("yes") || userResponse.contains("y")) {
             return true;
         } else {
             return false;
@@ -32,12 +32,12 @@ public class Input {
     public int getInt(int min, int max) {
         System.out.println("See if your number is within the range: ");
         int userResponse = scanner.nextInt();
-        if (userResponse >= min && userResponse <= max) {
-            System.out.println("Dust your self off and try again!");
-            return getInt(min, max);
-        } else {
+        if (userResponse > min && userResponse < max) {
             System.out.println("Yay! " + userResponse + " is within the range!");
             return userResponse;
+        } else {
+            System.out.println("Dust your self off and try again!");
+            return getInt(min, max);
         }
     }
     public int getInt() {
@@ -50,11 +50,11 @@ public class Input {
         System.out.println("See if your number with a decimal is within range: ");
         double userInput = scanner.nextDouble();
         if (userInput >= min && userInput <= max) {
-            System.out.println("Try again.");
-            return getDouble(min, max);
-        } else {
             System.out.println("Yay! " + userInput + " is within the range!");
             return userInput;
+        } else {
+            System.out.println("Try again.");
+            return getDouble(min, max);
         }
     }
     public double getDouble() {
