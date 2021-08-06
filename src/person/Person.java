@@ -26,9 +26,9 @@ public class Person {
         this.name = name;
     }
 
-    public void sayHello() {
+    public String sayHello() {
 // print a message to the console using the person's name
-        System.out.println("Hello " + getName());
+        return "Hello I am " + name + ", I am " + age + ". ";
     }
 
     public static void main(String[] args) {

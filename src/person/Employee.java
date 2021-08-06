@@ -1,12 +1,12 @@
 package person;
 
-public class Employee extends Person{
+public class Employee extends Person {
 
     private String position;
     private long id;
     private double salary;
 
-    public Employee(String name, int age){
+    public Employee(String name, int age) {
         super(name, age);
     }
 
@@ -50,12 +50,21 @@ public class Employee extends Person{
                 '}';
     }
 
+    public String sayHello(){
+        return "Hello, my name is " + getName() + " and I am a " + position + ".";
+    }
+
     public static void main(String[] args) {
 
         Employee newEmployee = new Employee("James St. Patrick", 35, "Founder/CEO", 1, 35000);
 
-        System.out.println(newEmployee.getName());
-        System.out.println(newEmployee.getPosition());
-        System.out.println(newEmployee);
+        Employee newEmployee2 = new Employee("Diahann Carroll", 83, "Trailblazer", 2, 1000000);
+
+//        System.out.println(newEmployee.getName());
+//        System.out.println(newEmployee.getPosition());
+//        System.out.println(newEmployee);
+        System.out.println(newEmployee.sayHello());
+        System.out.println(newEmployee2.sayHello());
     }
+
 }
