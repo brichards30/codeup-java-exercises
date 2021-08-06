@@ -1,13 +1,17 @@
+package person;
+
 public class Person {
     private String name;
+    private int age;
 
     //CONSTRUCTORS
     public Person() {//default constructor/no-arg constructor
 
     }
 
-    public Person(String name) {
+    public Person(String name, int age) {
         this.name = name;
+        this.age = age;
 
     }
 
@@ -28,14 +32,14 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person denise = new Person("Denise");
+        Person denise = new Person();
         denise.setName("Tim");//
         denise.sayHello();
-//        Person person1 = new Person("John");
-//        Person person2 = new Person("John");
+//        person.Person person1 = new person.Person("John");
+//        person.Person person2 = new person.Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));
 //        System.out.println(person1 == person2);
-        Person person1 = new Person("John");
+        Person person1 = new Person();
         Person person2 = person1;
         System.out.println(person1 == person2);
 
@@ -58,27 +62,27 @@ public class Person {
 //    //goes into creation of object
 //    //get executed
 //
-//    public Person(){
+//    public person.Person(){
 ////        System.out.println("my constructor called");
 //        this("unknown", "unknown");
 //    }
 //
-//    public Person(String firstName){
+//    public person.Person(String firstName){
 //        //call 2-argument constructor using the keyword this
-//        //we do not call constructors inside the class itself using Person(...)
+//        //we do not call constructors inside the class itself using person.Person(...)
 //        //instead do this(...)
 //        this(firstName, "unknown");
 //    }
 //
 //    //OVERLOADED CONSTRUCTOR
-////    public Person(String firstName){
+////    public person.Person(String firstName){
 ////        //this.firstName allows us to refer to global field firstName
 ////        //firstName by itself refers to the PARAMETER called firstName
 ////        this.firstName = firstName;
 ////        System.out.println("Global " + this.firstName + "param" + firstName);
 ////    }
 //
-//    public Person(String firstName, String lastName){
+//    public person.Person(String firstName, String lastName){
 //        this.firstName = firstName;
 //        this.lastName = lastName;
 //    }
@@ -104,25 +108,25 @@ public class Person {
 //
 //    public static void main(String[] args) {
 //
-//        Person jett = new Person(); //new variable bob of type Person_00Lecture. Create a new object of the Class
+//        person.Person jett = new person.Person(); //new variable bob of type Person_00Lecture. Create a new object of the Class
 //        jett.firstName = "Jett";
 //        jett.lastName = "Fisher";
 //
-//        Person barbra = new Person();
+//        person.Person barbra = new person.Person();
 //        barbra.firstName = "Barbra";
 //        barbra.lastName = "Jackson";
 //
 //        System.out.println(jett.getFullName());
 //        System.out.println(barbra.getFullName());
 //
-//       Person.abbreviateFirstName("Bob");
+//       person.Person.abbreviateFirstName("Bob");
 //
-//       Person tom = new Person("tom", "jones");
+//       person.Person tom = new person.Person("tom", "jones");
 //        System.out.println(tom.getFullName());
 
 
 //        System.out.println(abbreviateFirstName());
 
-//        Person.foo(); //correct way to use static method,
+//        person.Person.foo(); //correct way to use static method,
 
 
