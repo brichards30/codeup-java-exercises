@@ -30,14 +30,27 @@ public class AnimalFarm {
         animals[3] = new Pig("Wilbur");
         animals[4] = new Chicken("Cesare");
 
-        for (int i = 0; i < animals.length; i++) {
-            System.out.printf("%s is a(n) %s and goes: ", animals[i].getAnimalName(), animals[i].getClass().getSimpleName());
-            animals[i].makeSound();
+        //Pig tempPig = (Pig) animals[0];
+        //tempPig.fly();// Pigs do not have the Flyable interface
 
-            if(animals[i] instanceof Snake){
-                Snake tempSnake = (Snake) animals[i];
-                tempSnake.injectVenom();
+//        for (int i = 0; i < animals.length; i++) {
+//            System.out.printf("%s is a(n) %s and goes: ", animals[i].getAnimalName(), animals[i].getClass().getSimpleName());
+//            animals[i].makeSound();
+//
+//            if(animals[i] instanceof Snake){
+//                Snake tempSnake = (Snake) animals[i];
+//                tempSnake.injectVenom();
+//            }
+//        }
+        //make animals that can fly, fly
+        for (int i = 0; i < animals.length; i++) {
+            if (animals[i] instanceof FlightCapable) {
+                System.out.printf("I found a(n) %s that can fly: ", animals[i].getClass().getSimpleName());
+                FlightCapable tempFlyer = (FlightCapable) animals[i];
+                tempFlyer.fly();
+                tempFlyer.glide();
             }
+
         }
 
     }

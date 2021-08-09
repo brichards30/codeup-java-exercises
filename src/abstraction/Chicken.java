@@ -1,6 +1,6 @@
 package abstraction;
 
-public class Chicken extends Animal implements FlyingAnimal{
+public class Chicken extends Animal implements FlightCapable {
 
     public Chicken(String animalName) {
         super(animalName);
@@ -14,6 +14,6 @@ public class Chicken extends Animal implements FlyingAnimal{
 
     @Override
     public void fly() {
-        System.out.println("Flies a lil bit");
+        System.out.println("Flies a lil bit.");
     }
 }
