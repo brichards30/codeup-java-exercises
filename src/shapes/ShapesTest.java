@@ -13,6 +13,6 @@ public class ShapesTest {
         Rectangle box2 = new Square(5);
 
         System.out.println("The perimeter of Box2 is: " + box2.getPerimeter());
-        System.out.printf("The area of Box2 is: " + box2.getArea());
+        System.out.println("The area of Box2 is: " + box2.getArea());
     }
 }
