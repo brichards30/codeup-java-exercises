@@ -21,16 +21,29 @@ public class ArraysExercises {
         persons[1] = new Person("Angela Bassett", 63);
         persons[2] = new Person("Viola Davis", 56);
 
+        System.out.println("Original array: ");
+        for (int i = 0; i < persons.length; i++) {
+            System.out.println(persons[i].getName());
+
+        }
+        System.out.println("");
+        persons = addPerson(persons, new Person ("Jazmine Sullivan", 34));
+
+        System.out.println("With added person: ");
+       // Run for loop to see added new person
         for (int i = 0; i < persons.length; i++) {
             System.out.println(persons[i].getName());
         }
+        System.out.println("");
+        System.out.println("With added person, enchanced loop: ");
 
-        persons = addPerson(persons, new Person ("J. Cole", 36));
-
-        //Run for loop to see added new person
-        for (int i = 0; i < persons.length; i++) {
-            System.out.println(persons[i].getName());
+        //Enhanced loop
+        for (Person person : persons) {
+            System.out.println(person.getName());
         }
+
+
+
 
 
     }
