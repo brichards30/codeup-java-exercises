@@ -30,18 +30,18 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        System.out.println("See if your number is within the range: ");
+        //System.out.println("See if your number is within the range: ");
         int userResponse = scanner.nextInt();
-        if (userResponse > min && userResponse < max) {
-            System.out.println("Yay! " + userResponse + " is within the range!");
+        if (userResponse >= min && userResponse <= max) {
+            //System.out.println("Yay! " + userResponse + " is within the range!");
             return userResponse;
         } else {
-            System.out.println("Dust your self off and try again!");
+           System.out.println("Dust your self off and try again!");
             return getInt(min, max);
         }
     }
     public int getInt() {
-        System.out.println("Enter a whole number: ");
+        //System.out.println("Enter a whole number: ");
         int usersInteger = scanner.nextInt();
         return usersInteger;
     }
