@@ -22,7 +22,6 @@ public class Student {
 
     public double getGradeAverage(){
 
-            //STEP 1. Calculate sum of
                 double sumOfGrades = 0;
                 double amountOfGrades = grades.size();
                 for(Integer grade : grades){
@@ -31,9 +30,17 @@ public class Student {
             }
 
     public static void main(String[] args) {
+        Student student = new Student("John");
+        student.addGrade(57);
+        student.addGrade(68);
+        student.addGrade(88);
+        System.out.println(student.getGradeAverage());
 
-
-
+        Student denise = new Student("Denise");
+        denise.addGrade(80);
+        denise.addGrade(75);
+        denise.addGrade(64);
+        System.out.println("Denise's grade average is: " + denise.getGradeAverage());
 
 
     }
