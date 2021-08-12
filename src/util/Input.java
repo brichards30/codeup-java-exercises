@@ -40,10 +40,22 @@ public class Input {
             return getInt(min, max);
         }
     }
-    public int getInt() {
-        //System.out.println("Enter a whole number: ");
-        int usersInteger = scanner.nextInt();
-        return usersInteger;
+//    public int getInt() {
+//        //System.out.println("Enter a whole number: ");
+//        int usersInteger = scanner.nextInt();
+//        return usersInteger;
+//    }
+
+    public int getInt(){
+        System.out.println("Enter a number: ");
+        String s = getString();
+
+        try {
+            return Integer.valueOf(s);
+        }catch(NumberFormatException e) {
+            System.out.println("Not a number. Try again!");
+            return getInt();
+        }
     }
 
     public double getDouble(double min, double max) {
@@ -57,9 +69,27 @@ public class Input {
             return getDouble(min, max);
         }
     }
-    public double getDouble() {
-        System.out.println("Enter a number with a decimal: ");
-        double userNumber = scanner.nextDouble();
-        return userNumber;
+//    public double getDouble() {
+//        System.out.println("Enter a number with a decimal: ");
+//        double userNumber = scanner.nextDouble();
+//        return userNumber;
+//    }
+
+        public double getDouble(){
+            System.out.println("Enter a number: ");
+            String s = getString();
+
+            try {
+                return Double.valueOf(s);
+            }catch(NumberFormatException e) {
+                System.out.println("Not a number. Try again!");
+                return getDouble();
+            }
+        }
+    public static void main(String[] args) {
+        Input input = new Input();
+
+        //System.out.println(input.getInt());
+        System.out.println(input.getDouble());
     }
 }
