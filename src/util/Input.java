@@ -36,7 +36,7 @@ public class Input {
             //System.out.println("Yay! " + userResponse + " is within the range!");
             return userResponse;
         } else {
-           System.out.println("Dust your self off and try again!");
+           //System.out.println("Dust your self off and try again!");
             return getInt(min, max);
         }
     }
