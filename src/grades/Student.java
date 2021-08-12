@@ -1,8 +1,4 @@
 package grades;
-
-import movies.Movie;
-import movies.MoviesArray;
-
 import java.util.ArrayList;
 
 public class Student {
@@ -18,28 +14,28 @@ public class Student {
 
     public String getName() {return name;}
 
-    public void addGrade(int grade) {grades.add(grade);}
+    public void addGrade(int grade) {this.grades.add(grade);}
 
     public double getGradeAverage(){
 
                 double sumOfGrades = 0;
-                double amountOfGrades = grades.size();
+//                double amountOfGrades = grades.size();
                 for(Integer grade : grades){
                     sumOfGrades += grade;
-                }return sumOfGrades/amountOfGrades;
+                }return sumOfGrades / grades.size();
             }
 
     public static void main(String[] args) {
-        Student student = new Student("John");
-        student.addGrade(57);
-        student.addGrade(68);
-        student.addGrade(88);
-        System.out.println(student.getGradeAverage());
+        Student john = new Student("John");
+        john.addGrade(57);
+        john.addGrade(68);
+        john.addGrade(88);
+        System.out.println("John's grade average is: " + john.getGradeAverage());
 
         Student denise = new Student("Denise");
         denise.addGrade(80);
         denise.addGrade(75);
-        denise.addGrade(64);
+        denise.addGrade(85);
         System.out.println("Denise's grade average is: " + denise.getGradeAverage());
 
 

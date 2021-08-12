@@ -14,13 +14,13 @@ public class Input {
 
 
     public String getString() {
-        System.out.println("Say something: ");
+//        System.out.println("Say something: ");
         String userInput = scanner.nextLine();
         return userInput;
     }
 
     public boolean yesNo() {
-        System.out.println("Do you like pizza (y/n)?");
+//        System.out.println("Do you like pizza (y/n)?");
         String userResponse = scanner.nextLine();
         if (userResponse.equalsIgnoreCase("yes") || userResponse.contains("y")) {
             return true;
