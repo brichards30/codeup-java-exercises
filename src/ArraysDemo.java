@@ -81,24 +81,29 @@ public class ArraysDemo {
 //        System.out.println(names[0][0] + names[1][0]);
 //        System.out.println(names[0][2] + names[1][1]);
 
+//
+//        int[][] matrix = {
+//                {1, 2, 3},
+//                {4, 5, 6},
+//                {7, 8, 9}
+//        };
+//
+//        for (int[] row : matrix) {
+//            System.out.println("+---+---+---+");
+//
+//            System.out.print("| ");
+//
+//            for (int n : row) { //n represents each element
+//                System.out.print(n + " | ");
+//            }
+//            System.out.println();
+//        }
+//        System.out.println("+---+---+---+");
 
-        int[][] matrix = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
-        };
+                int[][] primes = new int[3][3];
+                primes[2][2] = 1;
 
-        for (int[] row : matrix) {
-            System.out.println("+---+---+---+");
-
-            System.out.print("| ");
-
-            for (int n : row) { //n represents each element
-                System.out.print(n + " | ");
+                System.out.println(primes[1][2]);
             }
-            System.out.println();
         }
-        System.out.println("+---+---+---+");
 
-    }
-}
